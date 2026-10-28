@@ -3,14 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import {
-  Play,
-  ArrowRight,
   Sparkles,
-  Users,
   MessageSquare,
   HelpCircle,
   TrendingUp,
-  Check,
 } from "lucide-react";
 import confetti from "canvas-confetti";
 import { YouTubeIcon } from "@/components/Icons";
@@ -24,7 +20,6 @@ const FEATURED_VIDEOS = [
     duration: "48:12",
     summary:
       "A complete from-scratch guide to building a production SaaS app with Next.js 15 App Router, React 19, MongoDB, and webhook payments.",
-    link: "https://www.youtube.com/@Haixity",
     gradient: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
   },
   {
@@ -34,7 +29,6 @@ const FEATURED_VIDEOS = [
     duration: "42:30",
     summary:
       "Understand the ReAct agent loop from first principles. Give LLMs safe file-system access, terminal execution, and automated test correction.",
-    link: "https://www.youtube.com/@Haixity",
     gradient: "linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)",
   },
   {
@@ -44,18 +38,7 @@ const FEATURED_VIDEOS = [
     duration: "36:45",
     summary:
       "How to architect distributed systems that never crash under load. Caching patterns, rate limiting, and database replication explained simply.",
-    link: "https://www.youtube.com/@Haixity",
     gradient: "linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)",
-  },
-  {
-    id: "vid-4",
-    tag: "DSA Patterns",
-    title: "Top 7 Algorithmic Patterns You Must Master for Coding Interviews",
-    duration: "31:20",
-    summary:
-      "Stop grinding random LeetCode problems. Learn Two Pointers, Sliding Window, Monotonic Stack, and Tree traversals with visual animations.",
-    link: "https://www.youtube.com/@Haixity",
-    gradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
   },
   {
     id: "vid-5",
@@ -64,7 +47,6 @@ const FEATURED_VIDEOS = [
     duration: "39:15",
     summary:
       "Express.js enterprise directory structures, Mongoose aggregation pipelines, indexing strategies, and JWT token rotation mechanics.",
-    link: "https://www.youtube.com/@Haixity",
     gradient: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
   },
   {
@@ -74,7 +56,6 @@ const FEATURED_VIDEOS = [
     duration: "27:50",
     summary:
       "Step-by-step CI/CD pipeline setup. Containerizing Next.js and Node.js microservices and deploying on Linux with Nginx reverse proxy.",
-    link: "https://www.youtube.com/@Haixity",
     gradient: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
   },
 ];
@@ -83,7 +64,7 @@ const INITIAL_POLL = [
   { id: "p1", text: "AI Agent Swarms (Multi-Agent Workflows)", votes: 64 },
   { id: "p2", text: "Next.js 15 Full E-Commerce with Stripe", votes: 89 },
   { id: "p3", text: "System Design: Designing YouTube / Netflix", votes: 72 },
-  { id: "p4", text: "DSA: Dynamic Programming Demystified", votes: 45 },
+  { id: "p4", text: "Fullstack SaaS: Multi-Tenant Architecture", votes: 53 },
 ];
 
 export default function YouTubeShowcase() {
@@ -137,7 +118,7 @@ export default function YouTubeShowcase() {
             Watch, Learn &amp; <span className="gradient-text-fire">Build With Us</span>
           </h2>
           <p className="section-subtitle">
-            Every video is crafted with clear diagrams, clean codebases, and zero
+            Every masterclass is crafted with clear diagrams, clean codebases, and zero
             unnecessary fluff. Learn by actually writing code.
           </p>
         </div>
@@ -175,7 +156,7 @@ export default function YouTubeShowcase() {
               <span className={styles.statDesc}>Subscribers</span>
             </div>
             <div className={styles.channelStat}>
-              <span className={styles.statNum}>6</span>
+              <span className={styles.statNum}>5</span>
               <span className={styles.statDesc}>Curriculum Tracks</span>
             </div>
             <div className={styles.channelStat}>
@@ -191,7 +172,7 @@ export default function YouTubeShowcase() {
               onClick={handleSubscribe}
             >
               <YouTubeIcon size={19} color="#ffffff" />
-              <span>Subscribe on YouTube</span>
+              <span>Visit @Haixity on YouTube</span>
             </a>
           </div>
         </div>
@@ -205,9 +186,6 @@ export default function YouTubeShowcase() {
                   className={styles.thumbBgGlow}
                   style={{ background: vid.gradient }}
                 />
-                <div className={styles.playOverlay}>
-                  <Play size={22} fill="currentColor" />
-                </div>
                 <span className={styles.durationBadge}>{vid.duration}</span>
               </div>
 
@@ -217,16 +195,6 @@ export default function YouTubeShowcase() {
                   <h4 className={styles.videoTitle}>{vid.title}</h4>
                   <p className={styles.videoSummary}>{vid.summary}</p>
                 </div>
-
-                <a
-                  href={vid.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.watchLink}
-                >
-                  <span>Watch on YouTube</span>
-                  <ArrowRight size={14} />
-                </a>
               </div>
             </div>
           ))}
@@ -245,7 +213,7 @@ export default function YouTubeShowcase() {
               Which Masterclass should Haixity drop next?
             </h3>
             <p className={styles.pollDesc}>
-              Vote below to guide our next in-depth video tutorial and GitHub starter repo.
+              Vote below to guide our next in-depth video tutorial and masterclass series.
             </p>
 
             <div className={styles.pollOptions}>
@@ -315,7 +283,6 @@ export default function YouTubeShowcase() {
               style={{ fontSize: "0.9rem", alignSelf: "center" }}
             >
               <span>Visit Community Tab</span>
-              <ArrowRight size={15} />
             </a>
           </div>
         </div>

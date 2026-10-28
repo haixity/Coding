@@ -107,13 +107,13 @@ export default function Hero() {
     }, 450);
   };
 
-  const handleSubscribeConfetti = () => {
+  const handleCelebrate = () => {
     try {
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 70,
+        spread: 60,
         origin: { y: 0.6 },
-        colors: ["#ff0033", "#8b5cf6", "#06b6d4", "#ffffff"],
+        colors: ["#8b5cf6", "#06b6d4", "#ff0033", "#ffffff"],
       });
     } catch {
       // fallback
@@ -147,27 +147,27 @@ export default function Hero() {
 
             <p className={styles.heroSubtitle}>
               Welcome to <strong>Haixity</strong> — the destination for developers
-              ready to move beyond tutorial hell. We teach modern Full-Stack Next.js,
-              backend architectures, DSA problem solving, and autonomous AI agents
+              ready to master modern development skills. We teach modern Full-Stack Next.js,
+              backend architectures, system design, and autonomous AI agents
               through production-grade real-world projects.
             </p>
 
             {/* CTA Buttons */}
             <div className={styles.heroCtaRow}>
               <a href="#curriculum" className="btn-primary">
-                <span>Explore 6 Tracks</span>
+                <span>Explore Tracks</span>
                 <ArrowRight size={17} />
               </a>
 
               <a
-                href="https://www.youtube.com/@Haixity?sub_confirmation=1"
+                href="https://www.youtube.com/@Haixity"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-youtube"
-                onClick={handleSubscribeConfetti}
+                onClick={handleCelebrate}
               >
                 <YouTubeIcon size={19} color="#ffffff" />
-                <span>Join on YouTube</span>
+                <span>Visit YouTube Channel</span>
               </a>
 
               <a
@@ -181,10 +181,10 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Quick Metrics Bar */}
+            {/* Metrics Bar without pioneer stats */}
             <div className={styles.statsBar}>
               <div className={styles.statItem}>
-                <span className={styles.statValue}>6</span>
+                <span className={styles.statValue}>5</span>
                 <span className={styles.statLabel}>Core Disciplines</span>
               </div>
               <div className={styles.statItem}>
@@ -196,13 +196,13 @@ export default function Hero() {
                 <span className={styles.statLabel}>Fluff Guarantee</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statValue}>Open</span>
-                <span className={styles.statLabel}>Source Codebases</span>
+                <span className={styles.statValue}>Production</span>
+                <span className={styles.statLabel}>Ready Engineering</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Interactive Code & Architecture Lab */}
+          {/* Right Column: Interactive Code Playground */}
           <div className={styles.terminalCard}>
             <div className={styles.terminalHeader}>
               <div className={styles.windowControls}>

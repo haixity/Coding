@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://haixity.dev"),
   title: "Haixity — Code. Learn. Build. Grow. | Modern Developer Education",
   description:
-    "Your destination for mastering modern web development, full-stack architecture, system design, data structures, and autonomous AI agents through hands-on, real-world projects.",
+    "Your destination for mastering modern web development, full-stack architecture, system design, and autonomous AI agents through hands-on, real-world projects.",
   keywords: [
     "Haixity",
     "Code Learn Build Grow",
@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     "Web Development",
     "Backend Development",
     "System Design",
-    "Data Structures and Algorithms",
     "AI Agents",
     "Full-Stack Projects",
   ],

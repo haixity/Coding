@@ -7,8 +7,6 @@ import {
   Globe,
   Server,
   Bot,
-  Binary,
-  Trophy,
   RotateCcw,
 } from "lucide-react";
 import confetti from "canvas-confetti";
@@ -139,42 +137,6 @@ const ROADMAPS: Roadmap[] = [
       },
     ],
   },
-  {
-    id: "dsa",
-    title: "DSA & Interview Mastery",
-    icon: Binary,
-    description: "Crack coding interviews by mastering patterns, not memorizing questions.",
-    milestones: [
-      {
-        id: "dsa-1",
-        title: "Stage 1: Complexity & Two-Pointer Patterns",
-        duration: "Weeks 1–3",
-        summary: "Big-O mastery, HashMaps, Two Pointers, and Sliding Window algorithmic techniques.",
-        skills: ["Big-O Complexity", "HashMaps", "Two Pointers", "Sliding Window", "Array Manipulation"],
-      },
-      {
-        id: "dsa-2",
-        title: "Stage 2: Linked Lists, Stacks & Queues",
-        duration: "Weeks 4–5",
-        summary: "Monotonic stacks, fast/slow pointers, and recursive linked list manipulations.",
-        skills: ["Linked Lists", "Monotonic Stack", "Queue Design", "Recursion", "Binary Search"],
-      },
-      {
-        id: "dsa-3",
-        title: "Stage 3: Trees, Graphs & Traversal",
-        duration: "Weeks 6–8",
-        summary: "Binary Search Trees, BFS & DFS on matrices and graphs, Dijkstra, and Union-Find.",
-        skills: ["Binary Trees", "Graphs (BFS/DFS)", "Dijkstra Algorithm", "Topological Sort", "Union-Find"],
-      },
-      {
-        id: "dsa-4",
-        title: "Stage 4: Dynamic Programming & System Design",
-        duration: "Weeks 9–12",
-        summary: "1D/2D DP memoization & tabulation, plus foundational system design interview questions.",
-        skills: ["Dynamic Programming", "Knapsack", "System Design Basics", "Mock Interviews"],
-      },
-    ],
-  },
 ];
 
 export default function InteractiveRoadmaps() {
@@ -188,7 +150,6 @@ export default function InteractiveRoadmaps() {
     setCompletedMap((prev) => {
       const next = { ...prev, [id]: !prev[id] };
       
-      // Check if all milestones in this roadmap are now completed
       const allDone = roadmap.milestones.every((m) => next[m.id]);
       if (allDone && !prev[id]) {
         try {
@@ -344,4 +305,3 @@ export default function InteractiveRoadmaps() {
     </section>
   );
 }
-

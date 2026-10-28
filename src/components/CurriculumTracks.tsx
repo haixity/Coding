@@ -5,7 +5,6 @@ import {
   Globe,
   Server,
   Layers,
-  Binary,
   Cpu,
   Bot,
   ArrowRight,
@@ -13,12 +12,11 @@ import {
   X,
   BookOpen,
 } from "lucide-react";
-import { YouTubeIcon } from "@/components/Icons";
 import styles from "./CurriculumTracks.module.css";
 
 interface Track {
   id: string;
-  category: "web" | "backend" | "fullstack" | "dsa" | "system" | "ai";
+  category: "web" | "backend" | "fullstack" | "system" | "ai";
   title: string;
   difficulty: "Beginner" | "Intermediate" | "Advanced" | "Comprehensive";
   icon: typeof Globe;
@@ -88,26 +86,6 @@ const TRACKS_DATA: Track[] = [
       "Payment Processing with Stripe Webhooks & Subscription Management",
       "Real-Time Capabilities with WebSockets & Server-Sent Events",
       "End-to-End Testing (Playwright), Monitoring, and Production Rollouts",
-    ],
-  },
-  {
-    id: "dsa-interview",
-    category: "dsa",
-    title: "Data Structures & Algorithms",
-    difficulty: "Intermediate",
-    icon: Binary,
-    iconStyle: styles.iconAmber,
-    description:
-      "Learn to think like a software engineer. Don't memorize solutions—master core algorithmic patterns, solve LeetCode problems with clarity, and crack technical interviews.",
-    tech: ["Arrays & HashMaps", "Two Pointers", "Sliding Window", "Trees & Graphs", "Dynamic Programming"],
-    whatYouBuild:
-      "Algorithmic pattern handbook with visual walkthroughs and optimized Big-O benchmarks.",
-    modules: [
-      "Big-O Time & Space Complexity Analysis from First Principles",
-      "Core Patterns: Two Pointers, Fast & Slow Pointers, Sliding Window",
-      "Trees & Graph Traversal: BFS, DFS, Dijkstra, Union-Find",
-      "Dynamic Programming: Memoization, Tabulation & Space Optimization",
-      "Mock Technical Interview Breakdowns and Behavioral Strategy",
     ],
   },
   {
@@ -183,11 +161,10 @@ export default function CurriculumTracks() {
         {/* Category Filters */}
         <div className={styles.filterRow}>
           {[
-            { id: "all", label: "All 6 Disciplines" },
+            { id: "all", label: "All 5 Disciplines" },
             { id: "web", label: "Web Development" },
             { id: "backend", label: "Backend Engineering" },
             { id: "fullstack", label: "Full-Stack Projects" },
-            { id: "dsa", label: "DSA & Algorithms" },
             { id: "system", label: "System Design" },
             { id: "ai", label: "AI & AI Agents" },
           ].map((cat) => (
@@ -244,19 +221,9 @@ export default function CurriculumTracks() {
                     className={styles.detailsBtn}
                     onClick={() => setSelectedTrack(track)}
                   >
-                    <span>View Syllabus</span>
+                    <span>View Track Syllabus</span>
                     <ArrowRight size={14} />
                   </button>
-
-                  <a
-                    href="https://www.youtube.com/@Haixity"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.ytLinkPill}
-                  >
-                    <YouTubeIcon size={13} color="#ff0033" />
-                    <span>Watch Track</span>
-                  </a>
                 </div>
               </div>
             );
@@ -315,21 +282,11 @@ export default function CurriculumTracks() {
               </div>
             </div>
 
-            <div style={{ display: "flex", gap: "1rem", marginTop: "1.75rem" }}>
-              <a
-                href="https://www.youtube.com/@Haixity"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-youtube"
-                style={{ flex: 1, fontSize: "0.9rem" }}
-              >
-                <YouTubeIcon size={17} color="#ffffff" />
-                <span>Explore on YouTube</span>
-              </a>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "1.75rem" }}>
               <button
                 className="btn-secondary"
                 onClick={() => setSelectedTrack(null)}
-                style={{ fontSize: "0.9rem" }}
+                style={{ fontSize: "0.9rem", padding: "0.65rem 1.75rem" }}
               >
                 Close
               </button>

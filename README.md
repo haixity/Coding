@@ -20,7 +20,6 @@ Our mission is to make coding easier through practical learning, clear explanati
 - **Web Development**: HTML, CSS, JavaScript, React 19 & Next.js 15
 - **Backend Development**: Node.js, Express & MongoDB
 - **App Development & Full-Stack Projects**: Complete SaaS, Auth & Payments
-- **Data Structures & Algorithms**: Algorithmic Thinking, Big O & Interview Prep
 - **System Design & Software Engineering**: Microservices, Redis Caching & Scalability
 - **AI, Automation & AI Agents**: Autonomous ReAct Loops, Tool Calling & RAG
 

@@ -12,11 +12,12 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <div className={styles.brandHeader}>
               <Image
-                src="/haixity-logo.jpg"
+                src="/haixity-logo.jpg?v=2"
                 alt="Haixity Logo"
                 width={38}
                 height={38}
                 className={styles.footerLogo}
+                unoptimized
               />
               <span className={styles.brandName}>HAIXITY</span>
             </div>
@@ -38,20 +39,8 @@ export default function Footer() {
               <a href="#curriculum" className={styles.linkItem}>
                 Curriculum Tracks
               </a>
-              <a href="#roadmaps" className={styles.linkItem}>
-                Career Roadmaps
-              </a>
-              <a href="#simulator" className={styles.linkItem}>
-                Architecture Lab
-              </a>
-              <a href="#youtube" className={styles.linkItem}>
-                YouTube Hub
-              </a>
-              <a href="#github" className={styles.linkItem}>
-                Open Source Repos
-              </a>
               <a href="#community" className={styles.linkItem}>
-                Community Polls
+                Community
               </a>
             </div>
           </div>
@@ -68,9 +57,6 @@ export default function Footer() {
               </a>
               <a href="#curriculum" className={styles.linkItem}>
                 Full-Stack Apps
-              </a>
-              <a href="#curriculum" className={styles.linkItem}>
-                DSA &amp; Algorithms
               </a>
               <a href="#curriculum" className={styles.linkItem}>
                 System Design

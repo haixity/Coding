@@ -5,7 +5,7 @@ import {
   Send,
   CheckCircle2,
   MessageCircle,
-  Flame,
+  Sparkles,
 } from "lucide-react";
 import confetti from "canvas-confetti";
 import { YouTubeIcon, GitHubIcon } from "@/components/Icons";
@@ -37,8 +37,8 @@ export default function CommunityJoin() {
       <div className="container">
         <div className={styles.joinCard}>
           <div className={styles.pioneerPill}>
-            <Flame size={14} color="#ff0033" />
-            <span>PIONEER FOUNDING COHORT • JOIN THE MOVEMENT</span>
+            <Sparkles size={14} color="#06b6d4" />
+            <span>HAIXITY DEVELOPER COLLECTIVE • JOIN THE COMMUNITY</span>
           </div>
 
           <h2 className={styles.joinTitle}>
@@ -61,7 +61,7 @@ export default function CommunityJoin() {
                 className={styles.emailInput}
               />
               <button type="submit" className={styles.submitBtn}>
-                <span>Claim Pioneer Invite</span>
+                <span>Join Community</span>
                 <Send size={15} />
               </button>
             </form>
@@ -69,7 +69,7 @@ export default function CommunityJoin() {
             <div className={styles.successMessage}>
               <CheckCircle2 size={18} />
               <span>
-                Welcome to the Haixity Pioneer Cohort! Check your inbox shortly.
+                Welcome to the Haixity Community! Check your inbox shortly.
               </span>
             </div>
           )}
@@ -77,7 +77,7 @@ export default function CommunityJoin() {
           {/* Social Links Row */}
           <div className={styles.socialRow}>
             <a
-              href="https://www.youtube.com/@Haixity?sub_confirmation=1"
+              href="https://www.youtube.com/@Haixity"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialBtn}
