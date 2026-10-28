@@ -1,0 +1,346 @@
+.youtubeSection {
+  position: relative;
+  background: #080a12;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.channelHeroCard {
+  background: linear-gradient(135deg, rgba(255, 0, 51, 0.08) 0%, rgba(139, 92, 246, 0.08) 50%, rgba(6, 182, 212, 0.08) 100%);
+  border: 1px solid rgba(255, 0, 51, 0.25);
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 0, 51, 0.1);
+  flex-wrap: wrap;
+}
+
+.channelInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.channelAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 2px solid #ff0033;
+  box-shadow: 0 0 25px rgba(255, 0, 51, 0.4);
+}
+
+.channelMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.channelName {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.verifiedBadge {
+  color: #ff0033;
+}
+
+.channelHandle {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.pioneerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fca5a5;
+  background: rgba(255, 0, 51, 0.15);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  width: fit-content;
+  margin-top: 0.25rem;
+  border: 1px solid rgba(255, 0, 51, 0.3);
+}
+
+.channelStatsRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.channelStat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNum {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: var(--font-mono);
+}
+
+.statDesc {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Video Grid */
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.videoCard {
+  background: #0d111d;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 0, 51, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 0, 51, 0.15);
+}
+
+.thumbWrapper {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  background: #141a29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.thumbBgGlow {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.videoCard:hover .thumbBgGlow {
+  transform: scale(1.05);
+}
+
+.playOverlay {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 0, 51, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+  z-index: 2;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.videoCard:hover .playOverlay {
+  transform: scale(1.15);
+  background: #ff0033;
+}
+
+.durationBadge {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.videoBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.videoTag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #38bdf8;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.videoTitle {
+  font-size: 1.1rem;
+  font-weight: 750;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.videoSummary {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.watchLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff8095;
+  transition: all 0.2s;
+}
+
+.watchLink:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* Community Space (Poll & Discussions) */
+.communityCard {
+  background: #0f1322;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.pollTitle {
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.pollDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.pollOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pollBtn {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pollBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.pollBtnVoted {
+  background: rgba(6, 182, 212, 0.1) !important;
+  border-color: rgba(6, 182, 212, 0.5) !important;
+}
+
+.pollFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(6, 182, 212, 0.15);
+  z-index: 0;
+  transition: width 0.5s ease-out;
+}
+
+.pollText {
+  position: relative;
+  z-index: 1;
+}
+
+.pollPercent {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: #38bdf8;
+  font-size: 0.85rem;
+}
+
+.communityRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .videoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .communityCard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+  .channelHeroCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .channelStatsRow {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
